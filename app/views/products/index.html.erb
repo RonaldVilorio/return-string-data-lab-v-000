@@ -12,8 +12,8 @@ $(function() {
       $.get("/products/" + id + "/inventory", function(data2){
 
 
-        
-        $("#desc-" + id).text(data);
+
+        $("#desc-" + id).text(data + data2);
       })
     });
   });

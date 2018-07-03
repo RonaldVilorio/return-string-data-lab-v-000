@@ -10,7 +10,6 @@ $(function() {
     var id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
 
-      // alert(data)
       $("#desc-" + id).text(data);
     });
   });

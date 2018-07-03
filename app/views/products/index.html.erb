@@ -11,6 +11,11 @@ $(function() {
     $.get("/products/" + id + "/description", function(data) {
       $.get("/products/" + id + "/inventory", function(data2){
         debugger
+        if(data2 === "true"){
+          data2 = "Available"
+        }else {
+          data2 = "Sold Out"
+        }
         $("#desc-" + id).text(data + data2);
       })
     });

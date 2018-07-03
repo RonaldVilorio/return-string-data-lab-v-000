@@ -9,8 +9,12 @@ $(function() {
   $(".js-more").on('click', function() {
     var id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
-      $.get("/products/" + id + "/inventory", function(data))
+      $.get("/products/" + id + "/inventory", function(data2){
+
+
+
       $("#desc-" + id).text(data);
+      })
     });
   });
 });

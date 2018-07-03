@@ -11,8 +11,6 @@ $(function() {
     $.get("/products/" + id + "/description", function(data) {
       $.get("/products/" + id + "/inventory", function(data2){
 
-
-
         $("#desc-" + id).text(data + data2);
       })
     });
